@@ -1,0 +1,9 @@
+{
+  "firecraft.configuration.title": "FireCraft Configs",
+  "firecraft.configuration.section.firecraft.common.toml": "FireCraft Configs",
+  "firecraft.configuration.section.firecraft.common.toml.title": "FireCraft Configs",
+  "firecraft.configuration.items": "Item List",
+  "firecraft.configuration.magicNumberIntroduction": "Magic Number Text",
+  "firecraft.configuration.magicNumber": "Magic Number",
+  "item.firecraft.fireaxe": "消防斧"
+}
