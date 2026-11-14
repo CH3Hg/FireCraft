@@ -1,3 +1,4 @@
+
 name: Build
 
 on: [push, pull_request]
@@ -21,10 +22,17 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # This is needed to be able to run ./gradlew below
-      # You can run `git update-index --chmod +x gradlew` then remove this step.
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      # Upload the built mod JAR
+      - name: Upload FireCraft JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: FireCraft-${{ github.sha }}
+          path: build/libs/*.jar
+          if-no-files-found: error
+          retention-days: 14
